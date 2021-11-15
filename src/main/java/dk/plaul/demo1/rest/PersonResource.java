@@ -24,19 +24,20 @@ public class PersonResource {
     this.personRepository = personRepository;
   }
 
-  @ConditionalOnProperty(name = "features.time-endpoint-enabled", havingValue = "true")
+  // @ConditionalOnProperty(name = "features.time-endpoint-enabled", havingValue =
+  // "true")
   @RequestMapping("/server-time")
   public String getServerTime() {
     return new Date().toString();
   }
 
-  @Value("${features.time-endpoint-enabled}")
-  public String timePoint;
+  // @Value("${features.time-endpoint-enabled}")
+  // public String timePoint;
 
-  @RequestMapping("/val")
-  public String getVal() {
-    return timePoint;
-  }
+  // @RequestMapping("/val")
+  // public String getVal() {
+  // return timePoint;
+  // }
 
   @GetMapping
   Iterable<Person> getAll() {
