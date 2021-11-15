@@ -24,7 +24,7 @@ public class PersonResource {
 
   // @ConditionalOnProperty(name = "features.time-endpoint-enabled", havingValue =
   // "true")
-  @RequestMapping("/server/server-time")
+  @GetMapping("/server/server-time")
   public String getServerTime() {
     return "{\"servtime\":\"" + new Date().toString() + "\"}";
   }
