@@ -26,7 +26,12 @@ public class PersonResource {
   // "true")
   @RequestMapping("/server/server-time")
   public String getServerTime() {
-    return "{\"TID\":\"" + new Date().toString() + "\"}";
+    return "{\"servtime\":\"" + new Date().toString() + "\"}";
+  }
+
+  @RequestMapping("/server/server-time")
+  public String getVersion() {
+    return "{\"version\": 1.0}";
   }
 
   // @Value("${features.time-endpoint-enabled}")
