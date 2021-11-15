@@ -8,9 +8,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Demo1ApplicationTests {
 
+  private static final int NUMBER = 123;
+
   @Test
   void contextLoads() {
-    assertEquals(5, 5);
+    assertEquals(NUMBER, 5);
   }
 
 }
