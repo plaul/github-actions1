@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class Demo1ApplicationTests {
 
-  private static final int NUMBER = 123;
+  private static final int NUMBER = 5;
 
   @Test
   void contextLoads() {
