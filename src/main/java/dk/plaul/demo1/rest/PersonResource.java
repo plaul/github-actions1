@@ -1,6 +1,11 @@
 package dk.plaul.demo1.rest;
 
 import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.Date;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +23,21 @@ public class PersonResource {
   public PersonResource(PersonRepository personRepository) {
     this.personRepository = personRepository;
   }
+
+  // @ConditionalOnProperty(name = "features.time-endpoint-enabled", havingValue =
+  // "true")
+  @RequestMapping("/server-time")
+  public String getServerTime() {
+    return new Date().toString();
+  }
+
+  // @Value("${features.time-endpoint-enabled}")
+  // public String timePoint;
+
+  // @RequestMapping("/val")
+  // public String getVal() {
+  // return timePoint;
+  // }
 
   @GetMapping
   Iterable<Person> getAll() {
