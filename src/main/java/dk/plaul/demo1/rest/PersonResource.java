@@ -29,7 +29,7 @@ public class PersonResource {
     return "{\"servtime\":\"" + new Date().toString() + "\"}";
   }
 
-  @RequestMapping("/server/server-time")
+  @RequestMapping("/server/api-version")
   public String getVersion() {
     return "{\"version\": 1.0}";
   }
