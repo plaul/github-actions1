@@ -26,7 +26,7 @@ public class PersonResource {
   // "true")
   @GetMapping("/server/server-time")
   public String getServerTime() {
-    return "{\"servtime\":\"" + new Date().toString() + "\"}";
+    return "{\"Server-time\":\"" + new Date().toString() + "\"}";
   }
 
   @RequestMapping("/server/api-version")
